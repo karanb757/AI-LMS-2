@@ -1,16 +1,15 @@
 import { serve } from "inngest/next";
 import { inngest } from "../../../inngest/client";
+import {CreateNewUser, GenerateNotes, helloWorld,GenerateStudyTypeContent} from '../../../inngest/function.js'
 
-// Start with just one simple function for testing
-const testFunction = inngest.createFunction(
-  { id: "hello-world" },
-  { event: "test/hello.world" },
-  async ({ event, step }) => {
-    return { message: `Hello ${event.data.email}!` };
-  }
-);
-
+// Create an API that serves zero functions
 export const { GET, POST, PUT } = serve({
   client: inngest,
-  functions: [testFunction], // Start with just one function
+  streaming:'allow',
+  functions: [
+    helloWorld,
+    CreateNewUser,
+    GenerateNotes,
+    GenerateStudyTypeContent
+  ],
 });
