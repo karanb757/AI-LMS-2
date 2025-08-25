@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Enhanced Modern Prose Styling for Notes Content */
+.prose {
+  max-width: none;
+  line-height: 1.8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.prose h1 {
+  @apply text-4xl font-bold mb-8 mt-12;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.prose h2 {
+  @apply text-3xl font-semibold mb-6 mt-10;
+  color: #1a202c;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid #4299e1;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.1) 0%, transparent 100%);
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  letter-spacing: -0.02em;
+}
+
+.prose h3 {
+  @apply text-2xl font-medium mb-5 mt-8;
+  color: #2d3748;
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  letter-spacing: -0.01em;
+}
+
+.prose h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, #4299e1, #667eea);
+  border-radius: 1px;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed;
+  color: #4a5568;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.prose ul {
+  @apply mb-6 ml-0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose li {
+  @apply mb-3 leading-relaxed;
+  color: #4a5568;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 2rem;
+  transition: all 0.2s ease;
+}
+
+.prose li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #4299e1;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.prose li:hover {
+  color: #2d3748;
+  transform: translateX(4px);
+}
+
+.prose li:hover::before {
+  color: #667eea;
+  transform: scale(1.1);
+}
+
+.prose code {
+  @apply px-3 py-1 rounded-md text-sm font-medium;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  color: #d53f8c;
+  border: 1px solid #e2e8f0;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.prose pre {
+  @apply p-6 rounded-xl overflow-x-auto mb-8 shadow-lg;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border: 1px solid #4a5568;
+  position: relative;
+}
+
+.prose pre::before {
+  content: '●●●';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  color: #718096;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+}
+
+.prose pre code {
+  @apply bg-transparent px-0 py-0 border-none shadow-none;
+  color: black;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  display: block;
+  padding-top: 2rem;
+}
+
+.prose strong {
+  @apply font-semibold;
+  color: #2b6cb0;
+  background: linear-gradient(135deg, rgba(43, 108, 176, 0.1) 0%, transparent 100%);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+.prose blockquote {
+  @apply border-l-4 pl-6 italic mb-8 py-4;
+  background: linear-gradient(135deg, rgba(66, 153, 225, 0.05) 0%, rgba(102, 126, 234, 0.05) 100%);
+  border-left-color: #4299e1;
+  color: #4a5568;
+  font-size: 1.1rem;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+.prose blockquote::before {
+  content: '"';
+  position: absolute;
+  left: 1rem;
+  top: -0.5rem;
+  font-size: 3rem;
+  color: #4299e1;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+/* Enhanced table styling */
+.prose table {
+  @apply w-full mb-8 rounded-lg overflow-hidden shadow-lg;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.prose th {
+  @apply px-6 py-4 font-semibold text-left;
+  background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+  color: white;
+  font-size: 1rem;
+}
+
+.prose td {
+  @apply px-6 py-4 border-b border-gray-200;
+  color: #4a5568;
+}
+
+.prose tr:hover td {
+  background-color: rgba(66, 153, 225, 0.05);
+}
+
+/* Custom scrollbar for code blocks */
+.prose pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  background: #718096;
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Smooth animations */
+.prose * {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Special styling for key terms */
+.prose .key-term {
+  @apply font-semibold;
+  color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Enhanced button-like code elements */
+.prose code:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Section dividers */
+.prose hr {
+  @apply my-12 border-none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4299e1, transparent);
+  border-radius: 2px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .prose {
+    font-size: 0.95rem;
+  }
+  
+  .prose h1 {
+    @apply text-3xl;
+  }
+  
+  .prose h2 {
+    @apply text-2xl;
+  }
+  
+  .prose h3 {
+    @apply text-xl;
+  }
+  
+  .prose pre {
+    @apply p-4;
+    font-size: 0.85rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .prose {
+    color: #000;
+    background: #fff;
+  }
+  
+  .prose h1, .prose h2, .prose h3 {
+    color: #000;
+    background: none;
+    border: none;
+  }
+  
+  .prose pre {
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #ddd;
+  }
+}
