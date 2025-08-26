@@ -1,37 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 AI-LMS (AI-Powered Learning Management System)
 
-## Getting Started
+![AI-LMS Banner](https://via.placeholder.com/1200x400.png?text=AI-LMS+-+All-in-One+Learning+Platform)
 
-First, run the development server:
+> **AI-LMS** is a modern **AI-powered Learning Management System** designed to make learning **interactive, structured, and efficient**.  
+With features like **interactive course layouts**, **flashcards**, **quizzes**, and **personalized notes**, AI-LMS brings **everything you need in one platform** for a seamless learning experience.
 
+---
+
+## 🌟 Features
+
+- 📚 **Structured Learning Paths** – Organized topics to help you learn step by step.  
+- 🧠 **AI-Powered Recommendations** – Get smart suggestions based on your progress.  
+- 📝 **Personal Notes** – Save and organize notes by topic.  
+- 🎯 **Interactive Flashcards** – Revise faster with topic-specific flashcards.  
+- ❓ **Smart Quizzes** – Test your knowledge with real-time feedback.  
+- 🎨 **Modern UI/UX** – Clean, responsive, and **dark/light theme** supported.  
+- 🔗 **All-in-One Dashboard** – Access all learning tools in one place.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category       | Technologies Used |
+|----------------|------------------|
+| **Frontend**   | Next.js, React, TailwindCSS |
+| **Backend**    | Node.js, Express.js |
+| **Database**   | NeonDB / PostgreSQL |
+| **AI Features**| Gemini AI APIs |
+| **Auth**       | Clerk Authentication |
+| **Payments**   | Stripe Integration |
+| **Other Tools**| Vercel, Inngest |
+
+---
+
+## 📸 Screenshots
+
+| Dashboard | Flashcards | Quiz |
+|------------|------------|------|
+| ![Dashboard](https://via.placeholder.com/400x250.png?text=Dashboard+Preview) | ![Flashcards](https://via.placeholder.com/400x250.png?text=Flashcards+Preview) | ![Quiz](https://via.placeholder.com/400x250.png?text=Quiz+Preview) |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
 ```bash
+git clone https://github.com/your-username/ai-lms.git
+cd ai-lms
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Add Environment Variables
+
+Create a .env.local file and add:
+
+NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_key
+NEXT_PUBLIC_GEMINI_KEY=your_gemini_key
+DATABASE_URL=your_database_url
+STRIPE_SECRET_KEY=your_stripe_key
+
+4️⃣ Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📌 Roadmap
 
-## Learn More
+ Add AI-powered voice assistant for learning
 
-To learn more about Next.js, take a look at the following resources:
+ Support for collaborative study groups
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ Advanced analytics dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ Mobile app version
 
-## Deploy on Vercel
+🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are always welcome!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fork the repo
 
+Create a new branch (feature/your-feature)
+
+Commit changes
+
+Open a Pull Request
+
+📜 License
+
+This project is licensed under the MIT License
+.
+
+💡 Author
+
+Karan Bodkhe
+🔗 Portfolio
+ | LinkedIn
+ | GitHub
+
+⭐ If you like this project, don't forget to star the repo! ⭐
